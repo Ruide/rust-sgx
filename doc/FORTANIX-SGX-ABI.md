@@ -2,6 +2,16 @@
 
 This document describes the ABI of SGX enclaves built using `libenclave`.
 
+## elf2sgxs compatibility
+
+rust-lang toolchain version is defined as description for '.note.x86_64-fortanix-unknown-sgx' assembly section.
+
+| rust-lang toolchain version | fortanix-sgx-tools version | rust-lang git commit |
+| ---------------------------:| --------------------------:|---------------------:|
+|             1               |          0.4.0             |       In progress    |
+|             0               |          0.3.1             |                      |
+
+
 ## ABI version compatibility
 
 | ABI version | Rust std version | enclave-runner version |
@@ -19,6 +29,10 @@ This document describes the ABI of SGX enclaves built using `libenclave`.
 |       0.1.0 |        0.1.0-0.1.3 |               0.1.0-0.1.1 |
 
 ## Changelog
+
+### Version 0.4.0
+
+* Added support for new rust-lang toolchain which fixes: https://github.com/fortanix/rust-sgx/issues/174
 
 ### Version 0.3.2
 
